@@ -6,7 +6,7 @@ block content
             h1 List of Tours
         .col-sm-4
             a(href="/tours/add", class="btn btn-success float-right") Add new Tour
-    table.table
+    table.table.table-dark.table-striped
         thead
             tr
                 th Title
@@ -20,5 +20,5 @@ block content
                     td=tour.noOfDays
                     td=tour.price
                     td
-                        a(href="/tours/delete/"+tour._id, class="btn btn-danger") Delete
-                        a(href="/tours/edit/"+tour._id, class="btn btn-warning") Edit
+                        a(href="/tours/delete/"+tour._id, class="btn btn-danger btn-sm") Delete
+                        a(href="/tours/edit/"+tour._id, class="btn btn-warning btn-sm") Edit
