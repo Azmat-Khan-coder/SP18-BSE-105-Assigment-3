@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-8
+            h1 List of Tours
+        .col-sm-4
+            a(href="/tours/add", class="btn btn-success float-right") Add new Tour
+    table.table
+        thead
+            tr
+                th Title
+                th No of Days
+                th Price
+                th Actions
+        tbody
+            each tour in tours
+                tr
+                    td=tour.title
+                    td=tour.noOfDays
+                    td=tour.price
+                    td
+                        a(href="/tours/delete/"+tour._id, class="btn btn-danger") Delete
+                        a(href="/tours/edit/"+tour._id, class="btn btn-warning") Edit

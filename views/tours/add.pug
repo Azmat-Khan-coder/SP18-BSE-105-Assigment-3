@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+    h1 Add New Tour
+    form(action="/tours/add", method="post")
+        .form-group
+            label(for="title") Tour Title
+            input#title(type="text", class="form-control", name="title")
+        .form-group
+            label(for="noOfDays") No Of Days
+            input#noOfDays(type="text", class="form-control", name="noOfDays")
+        .form-group
+            label(for="price") Price
+            input#price(type="text", class="form-control", name="price")
+        input(type="submit", class="btn btn-info")
